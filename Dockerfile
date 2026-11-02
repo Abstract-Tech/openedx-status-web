@@ -5,6 +5,7 @@ USER root
 RUN mkdir -p /var/cache/status-cache && chown 101:101 /var/cache/status-cache
 USER 101
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY security-headers.inc /etc/nginx/conf.d/security-headers.inc
 COPY index.html /usr/share/nginx/html/index.html
 COPY assets/ /usr/share/nginx/html/assets/
 EXPOSE 8080

@@ -15,11 +15,10 @@ The container listens on port 8080, runs as a non-root user, and answers `/healt
 ## Run it
 
     docker run -d --name status-web --network <network-with-status-api> -p 8080:8080 \
-      ghcr.io/abstract-tech/openedx-status-web:latest
+      ghcr.io/abstract-tech/openedx-status-web:0.1.2
 
-The easiest way is the Docker Compose file in the `deploy/` folder of
-[openedx-status-api](https://github.com/Abstract-Tech/openedx-status-api). It starts the API, this page
-and a proxy together. The image there is `ghcr.io/abstract-tech/openedx-status-web`.
+The easiest way is [openedx-status-deploy](https://github.com/Abstract-Tech/openedx-status-deploy). It starts
+the API, this page and a proxy together.
 
 To build it yourself: `docker build -t openedx-status-web .`
 
